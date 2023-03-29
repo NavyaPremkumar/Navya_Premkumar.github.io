@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>password checking</title>
+<script type="text/javascript">
+function verifyPassword()
+{
+	var f=document.getElementById("first");
+	var s=document.getElementById("second");
+	if(f.value==""){
+	alert("enter a password");
+	return false;
+	}
+else if(f.value!=s.value)
+{
+alert("the two passwords are not the same, re-enter password");
+return false;
+}
+else
+{
+alert("correct password");
+return true;
+}
+}
+</script>
+</head>
+<body>
+<h3>password input</h3>
+<form id="myform" action="" onsubmit="verifyPassword()">
+<p>
+<label>enter password 
+<input type="password" id="first" size="10"/>
+</label>
+<label>verifyPassword
+<input type="password" id="second" size="10"/>
+</label>
+<input type="reset" name="reset"/>
+<input type="submit" name="submit"/>
+</p>
+</form>
+</body>
+</html>
